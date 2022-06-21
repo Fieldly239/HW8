@@ -20,6 +20,11 @@ builder.Services.AddDbContext<BranchMgmtContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionString"));
 });
 
+builder.Services.AddTransient<IApplicationsRepository, ApplicationsRepository>();
+builder.Services.AddTransient<IApplicationsService, ApplicationsService>();
+
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

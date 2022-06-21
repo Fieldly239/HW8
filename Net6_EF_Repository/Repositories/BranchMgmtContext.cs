@@ -13,5 +13,6 @@ namespace Net6_EF_Repository.Repositories
        
 
         public DbSet<Branches> Branches { get; set; }
+        public DbSet<Applications> Applications { get; set; }
     }
 }
