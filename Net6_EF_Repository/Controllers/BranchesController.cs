@@ -21,5 +21,28 @@ namespace Net6_EF_Repository.Controllers
         {
             return _branchesService.GetAll();
         }
+
+        [HttpGet("{id}")]
+        public Branches GetById(int id)
+        {
+            return _branchesService.GetById(id);
+        }
+
+        [HttpPost]
+        public void Add(Branches branches)
+        {
+            _branchesService.Add(branches);
+        }
+
+        [HttpPut("{id}")]
+        public void Update(int id, Branches branches)
+        {
+            _branchesService.Update(branches);
+        }
+        [HttpDelete("{id}")]
+        public void Delete(int id)
+        {
+            _branchesService.Delete(id);
+        }
     }
 }
